@@ -38,6 +38,7 @@ a complete list of these improvements.
 - Redux logger
 - Redux thunk
 - Compass reset
+- JSDoc Generation
 
 ## Redux Utilities
 
@@ -46,6 +47,8 @@ encountered when working with redux reducers and immutable records. Most of thes
 are by design very small utility functions that you could easily do yourself
 in code. The reason they have been abstracted is because they do subtle things
 that are often forgotten when you come back to code after a while.
+
+Many of these utilites are from the Reducing Boilerplate section of the Redux documentation.
 
 See the definitions and docstrings of each of these methods for more information
 about their usage.
@@ -62,6 +65,10 @@ about their usage.
     that maps action type to a reducer function. Avoids the huge switch statements
     often found in reducers. Automatically returns the initial state and the given
     state as appropriate.
+- `page` reducer - manages page/route-specific redux state based on your routes
+    configuration.
+- `requests` reducer - Manages typical request lifecycle and cancels previous
+    requests when another request supercedes a previous one.
 
 ## Starter Kit Usage & Setup
 Using this starter kit is easy and just takes a few steps.
@@ -96,7 +103,7 @@ project.
 
 6. Run `npm start` to run the development server. This will automatically hot reload your code when it changes (with some limitations).
 
-6. Go to `http://localhost:8080` to see the app running.
+6. Go to `http://localhost:4242` to see the app running.
 
 You can run `npm start` and go to that address anytime now to see your code.
 

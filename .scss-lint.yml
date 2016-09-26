@@ -1,0 +1,6 @@
+linters:
+  SelectorFormat:
+    convention: 'camel_case'
+
+  LeadingZero:
+    style: 'include_zero'
