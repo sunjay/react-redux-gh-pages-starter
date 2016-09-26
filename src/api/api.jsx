@@ -18,19 +18,15 @@ export class ApiError {
  */
 export function processResponse(transforms) {
   return (xhr, response) => {
-    if (!response.success) {
-      throw new ApiError(response.message, response.code);
-    }
-
     if (!transforms) {
-      return response.data;
+      return response;
     }
 
     if (typeof transforms === 'function') {
-      return transforms(response.data);
+      return transforms(response);
     }
 
-    const processed = {...response.data};
+    const processed = {...response};
     for (const key of Object.keys(transforms)) {
       processed[key] = transforms[key](processed[key]);
     }

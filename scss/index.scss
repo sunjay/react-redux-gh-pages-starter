@@ -1,22 +1,17 @@
 // It's likely that this file isn't even necessary. All of this can
 // be placed in the top-level App component's stylesheet
 
-@import "~compass-mixins/lib/compass";
-@import "~compass-mixins/lib/compass/reset";
+@import '~compass-mixins/lib/compass';
+@import '~compass-mixins/lib/compass/reset';
 
-*, 
-*:before,
-*:after {
+*,
+*::before,
+*::after {
     @include box-sizing(border-box);
 }
 
 body {
-  background: #EEE;
+  background: #eee;
   //TODO: Remove these
   padding: 20px;
 }
-
-html, body, h1, h2, h3, h4, h5, h6 {
-  font-family: 'Roboto', sans-serif;
-}
-

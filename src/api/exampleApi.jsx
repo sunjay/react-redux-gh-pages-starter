@@ -4,7 +4,7 @@ const {processResponse} = require('./api');
 
 const exampleApi = {
   get(id) {
-    return qwest.post(`http://jsonplaceholder.typicode.com/posts/${id}`)
+    return qwest.get(`http://jsonplaceholder.typicode.com/posts/${id}`)
       .then(processResponse());
   },
 };

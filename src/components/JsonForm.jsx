@@ -4,13 +4,14 @@ const SingleFieldForm = require('./SingleFieldForm');
 
 const {
   error,
-} = require('../../scss/components/form.scss');
+} = require('../../scss/components/home.scss');
 
 const JsonForm = ({json, onRequestJSON}) => (
   <div>
-    <SingleFieldForm defaultValue={json.value} onSubmit={onRequestJSON} />
+    <SingleFieldForm defaultValue='1' onSubmit={onRequestJSON} />
+    <pre>{JSON.stringify(json.value, null, 2)}</pre>
     {json.error ?
-      <p className={error}><strong>JSON Error:</strong> {json.error}</p>
+      <p className={error}><strong>Error:</strong> {json.error}</p>
       : null
     }
   </div>

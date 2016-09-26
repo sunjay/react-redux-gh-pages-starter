@@ -2,7 +2,7 @@ const React = require('react');
 
 const {
   singleFieldForm,
-} = require('../../scss/components/form.scss');
+} = require('../../scss/components/home.scss');
 
 const SingleFieldForm = ({
   defaultValue = '',
@@ -10,7 +10,9 @@ const SingleFieldForm = ({
 }) => {
   let input;
 
-  const submit = () => {
+  const submit = (event) => {
+    event.preventDefault();
+
     onSubmit(input.value);
     return false;
   };

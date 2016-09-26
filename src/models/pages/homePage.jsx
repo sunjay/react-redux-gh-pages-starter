@@ -63,7 +63,7 @@ class HomePage extends HomePageRecord {
    *    the given error occurred
    */
   jsonError(error) {
-    return this.set('jsonError', {error});
+    return this.set('json', {error});
   }
 }
 
